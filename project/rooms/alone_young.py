@@ -8,9 +8,9 @@ class AloneYoung(Room):
         budget = salary
         members_count = 1
         super().__init__(family_name,budget,members_count)
-        self.calculate_expenses(*self.appliances)
+        self.calculate_expenses(*self.appliances*30)
 
-# todo calculate expenses
+
 
 
 

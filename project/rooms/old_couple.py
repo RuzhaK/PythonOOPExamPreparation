@@ -11,6 +11,6 @@ class OldCouple(Room):
         budget = pension_one+pension_two
         members_count = 2
         super().__init__(family_name,budget,members_count)
-        self.calculate_expenses(*self.appliances)
+        self.calculate_expenses(*self.appliances*30)
 
 

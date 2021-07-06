@@ -26,5 +26,5 @@ class Room:
         for arg in args:
 
             res+=arg.cost
-        self.expenses=res
-# todo NOTE gore moje da niama vlojen cikal
+        self.__expenses=res
+
