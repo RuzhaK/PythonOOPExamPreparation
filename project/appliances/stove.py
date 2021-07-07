@@ -1,4 +1,4 @@
-from .appliance import Appliance
+from project.appliances.appliance import Appliance
 class Stove(Appliance):
     appliance_cost = 0.7
 

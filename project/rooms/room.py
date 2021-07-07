@@ -27,6 +27,6 @@ class Room:
         res=0
         for arg in args:
 
-            res+=arg.cost
+            res+=arg.get_monthly_expense()
         self.expenses=res
 

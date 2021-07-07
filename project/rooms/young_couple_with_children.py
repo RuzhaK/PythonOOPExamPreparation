@@ -21,6 +21,6 @@ class YoungCoupleWithChildren(Room):
             self.appliances.append(TV())
 
         expenses=self.appliances+self.children
-        self.calculate_expenses(*expenses*30)
+        self.calculate_expenses(*expenses)
 
 

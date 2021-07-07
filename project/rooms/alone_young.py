@@ -1,4 +1,4 @@
-from .room import Room
+from project.rooms.room import Room
 from project.appliances.tv import TV
 
 class AloneYoung(Room):
@@ -10,7 +10,7 @@ class AloneYoung(Room):
         members_count = 1
         super().__init__(family_name,budget,members_count)
         self.room_cost = self.default_room_cost
-        self.calculate_expenses(*self.appliances*30)
+        self.calculate_expenses(*self.appliances)
 
 
 

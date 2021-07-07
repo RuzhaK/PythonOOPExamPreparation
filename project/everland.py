@@ -1,4 +1,4 @@
-from .rooms.room import Room
+from project.rooms.room import Room
 
 class Everland:
     rooms:list
@@ -49,7 +49,7 @@ class Everland:
             s+=f"{room_name} with {members} members. Budget: {current_budget:0.2f}$, Expenses: {expenses:0.2f}$\n"
             for n,child in enumerate(room.children,1):
                 cost_for_one_month=child.cost*30
-                s+=f"--- Child {n} monthly cost: {cost_for_one_month}$\n"
+                s+=f"--- Child {n} monthly cost: {cost_for_one_month:.2f}$\n"
             cost_of_all_appliances=sum([a.cost for a in room.appliances])
 
             s+=f"--- Appliances monthly cost: {cost_of_all_appliances*30:0.2f}$\n"

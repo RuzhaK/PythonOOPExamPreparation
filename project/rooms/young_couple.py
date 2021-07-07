@@ -13,6 +13,6 @@ class YoungCouple(Room):
         super().__init__(family_name,budget,members_count)
         self.room_cost = self.default_room_cost
         expenses=self.appliances+self.children
-        self.calculate_expenses(*expenses*30)
+        self.calculate_expenses(*expenses)
 
 

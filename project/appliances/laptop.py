@@ -1,4 +1,4 @@
-from .appliance import Appliance
+from project.appliances.appliance import Appliance
 class Laptop(Appliance):
     appliance_cost = 1
 

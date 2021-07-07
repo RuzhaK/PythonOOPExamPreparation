@@ -1,4 +1,4 @@
-from .room import Room
+from project.rooms.room import Room
 from ..appliances.tv import TV
 from ..appliances.fridge import Fridge
 from ..appliances.stove import Stove
@@ -12,6 +12,6 @@ class OldCouple(Room):
         members_count = 2
         super().__init__(family_name,budget,members_count)
         self.room_cost = self.default_room_cost
-        self.calculate_expenses(*self.appliances*30)
+        self.calculate_expenses(*self.appliances)
 
 
