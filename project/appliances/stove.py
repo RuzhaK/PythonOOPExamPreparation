@@ -1,4 +1,6 @@
 from .appliance import Appliance
 class Stove(Appliance):
+    appliance_cost = 0.7
+
     def __init__(self):
-        self.cost=0.7
+        super().__init__(self.appliance_cost)

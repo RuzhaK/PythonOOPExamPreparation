@@ -9,7 +9,9 @@ class Room:
         self.budget=budget
         self.members_count=members_count
         self.children=[]
-        self.__expenses=0
+        self.expenses=0
+    #     todo ako imame setter, nikade drugade ne slagame dwe dolni cherti izwan tiah!!!None da e che ne e kazano che e 0, ама после валидейшъна как?
+
         
     @property
     def expenses(self):
@@ -17,7 +19,7 @@ class Room:
     
     @expenses.setter
     def expenses(self, value):
-        if value<0:
+        if value and value<0 :
             raise ValueError("Expenses cannot be negative")
         self.__expenses=value
 
@@ -26,5 +28,5 @@ class Room:
         for arg in args:
 
             res+=arg.cost
-        self.__expenses=res
+        self.expenses=res
 

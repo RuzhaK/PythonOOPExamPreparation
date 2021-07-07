@@ -5,7 +5,7 @@ from ..appliances.laptop import Laptop
 from ..people.child import Child
 
 class YoungCoupleWithChildren(Room):
-    room_cost = 30
+    default_room_cost = 30
     children=[]
     appliances=[]
 
@@ -13,6 +13,7 @@ class YoungCoupleWithChildren(Room):
         budget = salary_two+salary_one
         members_count = 2+len(children)
         super().__init__(family_name, budget, members_count)
+        self.room_cost = self.default_room_cost
         self.children=list(children)
         for _ in range(members_count):
             self.appliances.append(Laptop())

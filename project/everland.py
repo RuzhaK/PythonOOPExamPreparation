@@ -2,16 +2,20 @@ from .rooms.room import Room
 
 class Everland:
     rooms:list
+
     def __init__(self):
         self.rooms=[]
+
     def add_room(self, room: Room):
         self.rooms.append(room)
+
     def get_monthly_consumptions(self):
         total_consumption=0
         for r in self.rooms:
             total_consumption+=r.expenses+r.room_cost
 
         return f"Monthly consumption: {total_consumption:0.2f}$."
+
     def pay(self):
         strings=[]
         rooms_to_remove=[]

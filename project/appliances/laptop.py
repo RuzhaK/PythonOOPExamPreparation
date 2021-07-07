@@ -1,4 +1,6 @@
 from .appliance import Appliance
 class Laptop(Appliance):
+    appliance_cost = 1
+
     def __init__(self):
-        self.cost=1
+        super().__init__(self.appliance_cost)

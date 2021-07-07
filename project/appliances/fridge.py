@@ -1,4 +1,6 @@
 from .appliance import Appliance
 class Fridge(Appliance):
+    appliance_cost = 1.2
     def __init__(self):
-        self.cost=1.2
+        super().__init__(self.appliance_cost)
+

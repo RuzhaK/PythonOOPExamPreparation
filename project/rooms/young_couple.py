@@ -4,13 +4,14 @@ from ..appliances.fridge import Fridge
 from ..appliances.laptop import Laptop
 
 class YoungCouple(Room):
-    room_cost = 20
+    default_room_cost = 20
     appliances=[TV(),TV(),Fridge(),Fridge(),Laptop(),Laptop()]
 
     def __init__(self,family_name: str, salary_one: float, salary_two:float):
         budget = salary_two+salary_one
         members_count = 2
         super().__init__(family_name,budget,members_count)
+        self.room_cost = self.default_room_cost
         expenses=self.appliances+self.children
         self.calculate_expenses(*expenses*30)
 
